@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuriosIA - Busca DuckDuckGo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="logo">
+                <span class="icon">🦆</span>
+                <h1>Curios<b>IA</b> DuckSearch</h1>
+            </div>
+            <p class="subtitle">Pesquisa direta no DuckDuckGo. A resposta e a notícia aparecem na própria página com leitura por voz.</p>
+        </header>
+
+        <!-- Formulário de Busca -->
+        <main class="main-content">
+            <section class="card input-card">
+                <label for="question-input" class="input-label">Pesquisar no DuckDuckGo</label>
+                <div class="input-wrapper">
+                    <textarea id="question-input" placeholder="Digite qualquer pergunta ou curiosidade..." rows="3"></textarea>
+                    <button id="mic-btn" title="Falar por voz" class="icon-btn">🎤</button>
+                </div>
+                
+                <div class="actions">
+                    <button id="ask-btn" class="btn btn-primary">
+                        <span>🔍 Pesquisar sem Sair da Página</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Cartão onde a resposta do DuckDuckGo é exibida -->
+            <section id="result-card" class="card result-card hidden">
+                <div class="result-header">
+                    <span class="badge" id="source-badge">DuckDuckGo API</span>
+                    
+                    <!-- Leitura de Voz da I.A. -->
+                    <div class="voice-controls">
+                        <button id="speak-btn" class="btn-voice" title="Ouvir resposta">
+                            <span class="voice-icon">🔊</span> <span id="voice-btn-text">Ouvir Resposta</span>
+                        </button>
+                        <button id="stop-voice-btn" class="btn-voice-stop hidden" title="Parar voz">
+                            ⏹️ Parar
+                        </button>
+                    </div>
+                </div>
+
+                <h2 id="result-title" class="result-title">Título</h2>
+                
+                <div class="result-body" id="result-body">
+                    <!-- Conteúdo extraído diretamente da busca -->
+                </div>
+
+                <!-- Link da fonte do DuckDuckGo -->
+                <div class="source-container">
+                    <span class="source-label">Fonte da informação na Web:</span>
+                    <a id="result-link" href="#" target="_blank" rel="noopener noreferrer" class="source-link">
+                        🌐 Ver fonte original no DuckDuckGo →
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Fundo Preto Absoluto | DuckDuckGo Instant Search API | Leitura por Voz</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
